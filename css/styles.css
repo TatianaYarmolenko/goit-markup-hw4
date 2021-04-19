@@ -401,12 +401,16 @@ p {
 }
 .client-item {
   align-items: center;
-  width: calc(100% - 150px / 6);
+  width: calc(100% - 6 * 30px / 6);
   height: 92px;
   padding: 0;
 
   border: 1px solid #afb1b8;
-  background-color: tomato;
+  outline: 1px solid black;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .client-button {
@@ -414,8 +418,15 @@ p {
   /* width: 44px;
   height: 44px; */
   padding: 0;
+  /* width: calc(100% - 6 * 30px / 6); */
 
   background-color: aqua;
+}
+.client-icon {
+  width: 41px;
+  height: 46px;
+  background-image: url(../images/client.svg/group-2.svg);
+  background-size: contain;
 }
 
 /* .twitter {
