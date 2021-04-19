@@ -88,15 +88,12 @@ p {
   cursor: pointer;
 }
 
-.dark-bg {
-  background-color: var(--dark-bg);
-}
-
 .hero {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--dark-bg);
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.4),
@@ -242,9 +239,28 @@ p {
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
+  margin-bottom: 30px;
 }
 
-.features .item:nth-child(1) {
+.button {
+  padding: 0;
+  border: none;
+  text-align: center;
+}
+
+.button-icon {
+  display: block;
+  width: 65px;
+  height: 70px;
+  /* background-image: url(../images/icons.svg/vector.svg); */
+  cursor: pointer;
+  /* margin-right: auto;
+  margin-left: auto; */
+
+  align-items: center;
+}
+
+/* .features .item:nth-child(1) {
   background-image: url(../images/group/vector.svg);
 }
 
@@ -258,7 +274,7 @@ p {
 
 .features .item:nth-child(4) {
   background-image: url(../images/group/cosmos.svg);
-}
+} */
 
 .features .title {
   display: flex;
@@ -335,25 +351,71 @@ p {
 
 .network {
   display: flex;
-  /* background-color: var(--primary-white-color); */
-  /* text-align: center; */
-  background-color: olive;
+
   margin: 0;
   padding: 0;
+  justify-content: center;
+  padding: 0 32px 30px 32px;
 }
 
-.instagram {
-  margin-right: 10px;
+.network-link {
+  padding: 0;
+  border: none;
+  text-align: center;
+}
 
+.network-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.network-button {
+  align-items: center;
   width: 44px;
   height: 44px;
-  /* background-color: var(--primary-white-color);
-  /* background-color: tomato; */
-  /* background-image: url(../images/icons.svg/instagram.svg);
-  background-size: 20px;
+  padding: 0;
+  border: none;
   border-radius: 50%;
-  background-position: center;
-  background-repeat: no-repeat;  */
+  background-color: var(--primary-white-color);
+}
+
+.network-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: #afb1b8;
+}
+
+.network-button:hover,
+.network-button:focus {
+  background-color: var(--accent-color);
+}
+
+.network-icon:hover,
+.network-icon:focus {
+  fill: var(--primary-white-color);
+}
+
+.client {
+  display: flex;
+  width: 100%;
+}
+.client-item {
+  align-items: center;
+  width: calc(100% - 150px / 6);
+  height: 92px;
+  padding: 0;
+
+  border: 1px solid #afb1b8;
+  background-color: tomato;
+}
+
+.client-button {
+  align-items: center;
+  /* width: 44px;
+  height: 44px; */
+  padding: 0;
+
+  background-color: aqua;
 }
 
 /* .twitter {
@@ -422,11 +484,13 @@ p {
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--dark-bg);
 }
+
 .footer-first {
   display: block;
-  width: 270px;
-  height: 200px;
+  width: 231px;
+  height: 135px;
 }
 
 .address {
@@ -439,27 +503,58 @@ p {
 }
 
 .social {
-  display: flex;
+  display: block;
   text-align: center;
-  width: 270px;
-  height: 270px;
+  width: 250px;
+  height: 135px;
+  margin-left: 70px;
 }
 
-.social-item {
-  display: block;
+.social .title {
+  margin-bottom: 20px;
+  text-align: left;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.social .list {
+  display: flex;
+  justify-content: left;
+}
+
+/* .social .list {
+  text-align: center;
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  padding: 0 32px 30px 32px;
+} */
+
+.social-button {
+  align-items: center;
   width: 44px;
   height: 44px;
+  padding: 0;
+  border: none;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.social .list {
-  text-align: center;
+.social-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: var(--primary-white-color);
 }
 
-/* .dark-bg {
-  background-color: var(--dark-bg);
-} */
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--accent-color);
+}
 
 /* Стили для portfolio.html */
 
