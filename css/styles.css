@@ -74,7 +74,7 @@ p {
 }
 
 .btn {
-  /* display: inline-block; */
+  display: inline-block;
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 50px;
@@ -190,10 +190,20 @@ p {
 .auth-nav .link:focus {
   color: var(--accent-color);
 }
+.auth-icon:hover,
+.auth-icon:focus {
+  color: var(--accent-color);
+}
+/* 
+.link:hover .auth-icon,
+.link:focus .auth-icon {
+  color: var(--accent-color);
+} */
 
 .auth-icon {
   margin-right: 10px;
-  stroke: currentColor;
+  /* stroke: currentColor; */
+  fill: currentColor;
 }
 
 .features {
@@ -236,9 +246,9 @@ p {
   width: 10px;
   height: 10px;
   stroke: var(--primary-text-color);
-  /* fill: #afb1b8; */
-  fill: tomato;
+  fill: var(--accent-grey-color);
 }
+
 .auth-item {
   display: inline-flex;
   align-items: center;
@@ -261,34 +271,6 @@ p {
   border: none;
   text-align: center;
 }
-
-.button-icon {
-  display: block;
-  width: 65px;
-  height: 70px;
-  /* background-image: url(../images/icons.svg/vector.svg); */
-  cursor: pointer;
-  /* margin-right: auto;
-  margin-left: auto; */
-
-  align-items: center;
-}
-
-/* .features .item:nth-child(1) {
-  background-image: url(../images/group/vector.svg);
-}
-
-.features .item:nth-child(2) {
-  background-image: url(../images/group/clock.svg);
-}
-
-.features .item:nth-child(3) {
-  background-image: url(../images/group/diagram.svg);
-}
-
-.features .item:nth-child(4) {
-  background-image: url(../images/group/cosmos.svg);
-} */
 
 .features .title {
   display: flex;
@@ -393,8 +375,6 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  /* background-color: var(--primary-white-color); */
-  /* background-color: green; */
 }
 
 .social-icons-link:hover .social-icons-svg,
@@ -436,6 +416,10 @@ p {
   border-radius: 4px;
 }
 
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .client-link {
   display: flex;
   align-items: center;
@@ -448,37 +432,6 @@ p {
 .client-link:focus .client-icon {
   fill: var(--accent-color);
 }
-
-.client-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-/* .client-item img:hover,
-.client-item img:focus {
-  color: var(--accent-color);
-} */
-
-/* .client-button {
-  align-items: center; */
-/* width: 44px;
-  height: 44px; */
-/* padding: 0; */
-/* width: calc(100% - 6 * 30px / 6); */
-
-/* background-color: aqua;
-}
-
-
-*/
-.instagram:hover,
-.instagram:focus {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-}
-
-/* .map {
-  color: var(--primary-white-color);
-} */
 
 .contacts-link {
   color: rgba(255, 255, 255, 0.6);
@@ -526,20 +479,15 @@ p {
   color: var(--primary-white-color);
 }
 
-.social .list {
+.social .social-icons {
   display: flex;
   justify-content: left;
+  padding: 0;
 }
 
-/* .social .list {
-  text-align: center;
-  display: flex;
-
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  padding: 0 32px 30px 32px;
-} */
+.social .social-icons-svg {
+  fill: var(--primary-white-color);
+}
 
 .social .social-icons-link {
   align-items: center;
@@ -548,18 +496,14 @@ p {
   padding: 0;
   border: none;
   border-radius: 50%;
+
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 
-
-.client-icon {
-  width: 20px;
-  height: 20px;
-
-  fill: var(--primary-white-color);
+.social .social-icons-link:hover,
+.social .social-icons-link:focus {
+  background-color: var(--accent-color);
 }
-
 
 /* Стили для portfolio.html */
 
@@ -598,8 +542,7 @@ img {
 
 .btn-item:hover,
 .btn-item:focus {
-  color: red;
-  /* color: var(--primary-white-color); */
+  color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
 
@@ -608,24 +551,31 @@ img {
   padding: auto;
 }
 
-.progress {
+.portfolio-list {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
 }
 
-.progress-test {
+.portfolio-item {
   width: 370px;
   margin: 15px;
+  border: 1px solid #eeeeee;
+}
+.portfolio-link {
+  display: block;
 }
 
-.progress-test:hover,
-.progress-test:focus {
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+/* .client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--accent-color);
+} */
 
 .card-content {
   padding: 20px 24px 20px 24px;
@@ -643,7 +593,7 @@ img {
   color: var(--title-text-color);
 }
 
-.portfolio-descr {
+.portfolio-desc {
   margin-bottom: 0;
 
   font-size: 16px;
