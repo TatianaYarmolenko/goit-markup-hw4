@@ -397,7 +397,6 @@ p {
   height: 92px;
   padding: 0;
 
-  border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -412,11 +411,17 @@ p {
   justify-content: center;
   width: 170px;
   height: 92px;
+  border: 1px solid #afb1b8;
 }
 
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
   fill: var(--accent-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
 }
 
 .contacts-link {
@@ -550,6 +555,8 @@ img {
 }
 .portfolio-link {
   display: block;
+
+  text-decoration: none;
 }
 
 .portfolio-link:hover,
